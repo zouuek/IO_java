@@ -1,17 +1,18 @@
 package org.example;
 
-public class DigitalMovie extends Movie{
-    private Integer fileSize;
+public class DigitalMovie extends Movie {
+    private final int fileSizeInGB;
 
-    public DigitalMovie(String name, String director, String genre, Double price) {
+    public DigitalMovie(String name, String director, String genre, double price, int fileSizeInGB) {
         super(name, director, genre, price);
+        this.fileSizeInGB = fileSizeInGB;
     }
-
-    public Integer getFileSize() {
-        return fileSize;
+    //wczytywanie z bazy danych
+    public DigitalMovie(String name, String director, String genre, Double price, Double rating, Integer numberOfRatings, int fileSizeInGB) {
+        super(name,director,genre,price,rating,numberOfRatings);
+        this.fileSizeInGB = fileSizeInGB;
     }
-
-    public void setFileSize(Integer fileSize) {
-        this.fileSize = fileSize;
+    public int getFileSize() {
+        return fileSizeInGB;
     }
 }

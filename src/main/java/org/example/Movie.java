@@ -56,6 +56,15 @@ public class Movie {
         this.rating = 0.0;
         this.numberOfRatings = 0;
     }
+    //konstruktor do wczytywania z "bazy danych"
+    public Movie(String name, String director, String genre, Double price, Double rating, Integer numberOfRatings){
+        this.name = name;
+        this.director = director;
+        this.genre = genre;
+        this.price = price;
+        this.rating = rating;
+        this.numberOfRatings = numberOfRatings;
+    }
 
     public Integer getNumberOfRatings() {
         return numberOfRatings;
@@ -67,6 +76,6 @@ public class Movie {
 
     @Override
     public String toString() {
-        return name + " " + director + " " + genre + "\n" +price + " " + rating +" "+ numberOfRatings;
+        return name + " " + director + " " + genre + "\n" + price + " " + rating + " " + numberOfRatings;
     }
 }
